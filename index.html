@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps di Acode</title>
+  <style>
+    /* Buat peta penuh layar */
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h3>Google Maps Sederhana</h3>
+  <div id="map"></div>
+
+  <!-- Script Google Maps -->
+  <script>
+    function initMap() {
+      var lokasi = { lat: -6.200000, lng: 106.816666 }; // Lokasi Jakarta
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: lokasi
+      });
+      var marker = new google.maps.Marker({
+        position: lokasi,
+        map: map
+      });
+    }
+  </script>
+
+  <!-- AIzaSyB9Uw4l0-847DgGGTKMWF7Bx6wIh2atEQQ -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9Uw4l0-847DgGGTKMWF7Bx6wIh2atEQQ&callback=initMap" async defer></script>
+</body>
+</html>
